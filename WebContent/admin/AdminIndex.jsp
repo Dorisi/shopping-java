@@ -13,11 +13,6 @@
 <title>金尚商城管理平台</title>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 </head>
-<body>
-hhhhh
-
-</body>
-</html>
  <frameset rows="29,*" frameborder="0" border="0" framespacing="0" cols="*">
   <frame name="top" scrolling="NO" noresize src="top.html">
   <frameset cols="20%,*" frameborder="0" border="0" framespacing="0" rows="*" scrolling="NO" name="mleft">
@@ -31,3 +26,5 @@ hhhhh
 </frameset>
 <noframes>
 </noframes> 
+</html>
+

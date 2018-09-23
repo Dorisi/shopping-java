@@ -1,65 +1,90 @@
+<!DOCTYPE HTML PUBliC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title></title>
+	<link rel=stylesheet href="script/toc.css" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<!-- <script language="JavaScript" src="script/AdminTree.js"></script> -->
+	<script language="JavaScript" src="script/JQuery/jquery-1.8.3.js"></script>
+	<style type='text/css'>
+		.level1 {
+			margin-left: 30;
+		}
 
-<HTML>
-<HEAD>
-<TITLE></TITLE>
-<LINK REL=stylesheet HREF="script/toc.css" TYPE="text/css">
-<SCRIPT LANGUAGE="JavaScript" src="script/AdminTree.js"></script>
-<STYLE TYPE='text/css'>
-.level1 {margin-left:30;}
-.level2 {display:none;margin-left:38;}
-</STYLE>
-</HEAD>
-<BODY onload="init()" topmargin="0" leftmargin="0" rightmargin="0">
-<DIV CLASS="level1" ID='head2Parent'>
-	<A class=OUTDENT href="" onclick='return expandIt("head2");'><IMG border=0 name=imEx  src="images/arrowUp.gif" id=ttt> ÓÃ»§¹ÜÀí</a>
-</DIV>
+		.level2 {
+			display: none;
+			margin-left: 38;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".outdent").click(function() {
+				console.log($($(this).parent()).attr("id"));
+				$($(this).parent()).replace("Parent","");
+				//æœªå®Œæˆæœªå®Œæˆæœªå®Œæˆ
+			});
+		});
+		
+		
+	</script>
+</head>
 
-<DIV CLASS="level2" ID='head2Child'>
-	<A href="UserList.jsp" id=ttt target=main><LI>ÓÃ»§ÁĞ±í</LI></a>
-</DIV>
+<body topmargin="0" leftmargin="0" rightmargin="0">
+	<div class="level1" id='head2Parent'>
+		<a class=outdent id="yhgl"><img border=0 name=imEx src="images/arrowUp.gif" id=ttt />ç”¨æˆ·ç®¡ç†</a>
+	</div>
 
-<DIV CLASS="level1" ID='head3Parent'>
-	<A class=OUTDENT href="" onclick='return expandIt("head3");' id=ttt><IMG border=0 height=13 name=imEx  src="images/arrowUp.gif" width=17> Àà±ğ¹ÜÀí</a>
-</DIV>
+	<div class="level2" ID='head2Child'>
+		<a href="UserList.jsp" id=ttt target=main> <li>ccc</li></a>
+	</div>
 
-<DIV CLASS="level2" ID='head3Child'>
-	<A href="CategoryList.jsp" id=ttt target=main><LI>Àà±ğÁĞ±í</LI></a>
-	<A href="CategoryListAJAX.jsp" id=ttt target=main><LI>Àà±ğÁĞ±íAJAX</LI></a>
-</DIV>
+	<div CLaSS="level1" ID='head3Parent'>
+		<a class=outdent href="" onclick='return expandIt("head3");' id=ttt>
+		<img border=0 height=13 name=imEx src="images/arrowUp.gif" width=17>ç±»åˆ«ç®¡ç†</a>
+	</div>
 
-<DIV CLASS="level1" ID='head4Parent'>
-	<A class=OUTDENT href="" onclick='return expandIt("head4");' id=ttt><IMG border=0 height=13 name=imEx  src="images/arrowUp.gif" width=17> ²úÆ·¹ÜÀí</a>
-</DIV>
+	<div CLaSS="level2" ID='head3Child'>
+		<a href="CategoryList.jsp" id=ttt target=main><li>ï¿½ï¿½ï¿½ï¿½Ğ±ï¿½</li></a> 
+		<a href="CategoryListAJAX.jsp" id=ttt target=main><li>ï¿½ï¿½ï¿½ï¿½Ğ±ï¿½AJAX</li></a>
+	</div>
 
-<DIV CLASS="level2" ID='head4Child'>
-	<A href="ProductList.jsp" id=ttt target=main><LI>²úÆ·ÁĞ±í</LI></a>
-	<A href="ProductSearch.jsp" id=ttt target=main><LI>²úÆ·ËÑË÷</LI></a>
-</DIV>
+	<div CLaSS="level1" ID='head4Parent'>
+		<a class=outdent href="" onclick='return expandIt("head4");' id=ttt>
+		<img border=0 height=13 name=imEx src="images/arrowUp.gif" width=17>äº§å“ç®¡ç†</a>
+	</div>
 
-<DIV CLASS="level1" ID='head6Parent'>
-	<A class=OUTDENT href="" onclick='return expandIt("head6");' id=ttt><IMG border=0 height=13 name=imEx  src="images/arrowUp.gif" width=17> ¶©µ¥¹ÜÀí</a>
-</DIV>
+	<div class="level2" ID='head4Child'>
+		<a href="ProductList.jsp" id=ttt target=main><li>ï¿½ï¿½Æ·ï¿½Ğ±ï¿½</li></a> 
+		<a href="ProductSearch.jsp" id=ttt target=main><li>ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½</li></a>
+	</div>
 
-<DIV CLASS="level2" ID='head6Child'>
-	<A href="OrderList.jsp" id=ttt target=main><LI>¶©µ¥ÁĞ±í</LI></a>
-</DIV>
+	<div class="level1" ID='head6Parent'>
+		<a class=outdent href="" onclick='return expandIt("head6");' id=ttt>
+		<img border=0 height=13 name=imEx src="images/arrowUp.gif" width=17>è®¢å•ç®¡ç†</a>
+	</div>
 
-<DIV CLASS="level1" ID='head7Parent'>
-	<A class=OUTDENT href="" onclick='return expandIt("head7");' id=ttt><IMG border=0 height=13 name=imEx  src="images/arrowUp.gif" width=17> Í³¼Æ·ÖÎö</a>
-</DIV>
+	<div class="level2" ID='head6Child'>
+		<a href="OrderList.jsp" id=ttt target=main><li>ï¿½ï¿½ï¿½ï¿½ï¿½Ğ±ï¿½</li></a>
+	</div>
 
-<DIV CLASS="level2" ID='head7Child'>
-	<A href="../servlet/SalesCountServlet" id=ttt target=main><LI>ÏúÁ¿Í³¼Æ</LI></a>
-</DIV>
+	<div class="level1" ID='head7Parent'>
+		<a class=outdent href="" onclick='return expandIt("head7");' id=ttt>
+		<img border=0 height=13 name=imEx src="images/arrowUp.gif" width=17>ç»Ÿè®¡åˆ†æ</a>
+	</div>
 
-<DIV CLASS="level1" ID='head8Parent'>
-	<A class=OUTDENT href="" onclick='return expandIt("head8");' id=ttt><IMG border=0 height=13 name=imEx  src="images/arrowUp.gif" width=17> Ö±²¥¹ÜÀí</a>
-</DIV>
+	<div class="level2" ID='head7Child'>
+		<a href="../servlet/SalesCountServlet" id=ttt target=main><li>ï¿½ï¿½ï¿½ï¿½Í³ï¿½ï¿½</li></a>
+	</div>
 
-<DIV CLASS="level2" ID='head8Child'>
-      <A href="Live.jsp" id=ttt target=main><LI>Ö±²¥×éÖ¯</LI></a>
-      <A href="LiveWorkstation.jsp" id=ttt target=main><LI>Ö±²¥¹¤×÷Õ¾¹ÜÀí</LI></a>
-</DIV>
+	<div class="level1" ID='head8Parent'>
+		<a class=outdent href="" onclick='return expandIt("head8");' id=ttt>
+		<img border=0 height=13 name=imEx src="images/arrowUp.gif" width=17>ç›´æ’­ç®¡ç†</a>
+	</div>
+
+	<div class="level2" ID='head8Child'>
+		<a href="Live.jsp" id=ttt target=main><li>Ö±ï¿½ï¿½ï¿½ï¿½Ö¯</li></a> <a
+			href="LiveWorkstation.jsp" id=ttt target=main><li>Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½ï¿½</li></a>
+	</div>
 
 </BODY>
 </html>

@@ -1,19 +1,19 @@
-BODY
+body
 {
     background-color:	#eeeeee;
     color:          	#000000;
-    font-family:    	"ËÎÌå";
+    font-family:    	"ï¿½ï¿½ï¿½ï¿½";
     font-weight:    	500;
 ; font-size: 9pt
 }
 
-A
+a
 {    
     color:          	#000000;
 	text-decoration:	none;
 }
 
-A:hover
+a:hover
 {    
 	color:				#0066CC;
 }
@@ -41,7 +41,7 @@ LI
 {
     line-height:    	14pt;
 }
-.OUTDENT 
+.outdent
 {
 	margin-left:		-16;
 }

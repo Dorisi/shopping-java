@@ -1,8 +1,9 @@
-<%@ page language="java" import="com.bjsxt.shopping.user.*" pageEncoding="GBK"%>
+<%@ page language="java" import="com.bjsxt.shopping.user.*" pageEncoding="UTF-8"%>
+
 <%@ page import="java.util.*"%>
 
 <%
-//¼ì²ésession£¬²é¿´ÓÃ»§ÊÇ·ñµÇÂ½
+//æ£€æŸ¥sessionï¼ŒæŸ¥çœ‹ç”¨æˆ·æ˜¯å¦ç™»é™†
 User u = (User)session.getAttribute("user");
 if(u == null) {
 	response.sendRedirect("Index.jsp");
@@ -12,7 +13,7 @@ if(u == null) {
 
 <%
 
-request.setCharacterEncoding("GBK");
+request.setCharacterEncoding("UTF-8");
 String action = request.getParameter("action");
 
 if(action != null && action.trim().equals("modify")) {
@@ -21,16 +22,16 @@ if(action != null && action.trim().equals("modify")) {
 	u.setPhone(phone);
 	u.setAddr(addr);
 	u.update();
-	out.println("¸ü¸Ä³É¹¦!¹§Ï²!");
+	out.println("æ›´æ”¹æˆåŠŸ!æ­å–œ!");
 	return;
 }
  %>
 
-<html><head><title>½ğÉĞÉÌ³Ç»áÔ±×¢²á</title>
+<html><head><title>é‡‘å°šå•†åŸä¼šå‘˜æ³¨å†Œ</title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <meta name="keywords" content="Discuz!,Board,Comsenz,forums,bulletin board,">
-<meta name="description" content="ĞÑ¿ÍÂÛÌ³×¨Çø  - Discuz! Board">
+<meta name="description" content="é†’å®¢è®ºå›ä¸“åŒº  - Discuz! Board">
 <meta name="generator" content="Discuz! 4.0.0RC4 with Templates 4.0.0">
 <meta name="MSSmartTagsPreventParsing" content="TRUE">
 <meta http-equiv="MSThemeCompatible" content="Yes">
@@ -111,7 +112,7 @@ select			{ font: 11px Verdana,Tahoma; color: #000000; font-weight: normal; backg
 </td>
     </tr></tbody></table>
 <table style="table-layout: fixed;" align="center" border="0" cellpadding="0" cellspacing="0" width="97%"> 
-<tbody><tr><td class="nav" align="left" nowrap="nowrap" width="90%">&nbsp;&#37329;&#23578;&#21830;&#22478; &#187; ×¢²á</td>
+<tbody><tr><td class="nav" align="left" nowrap="nowrap" width="90%">&nbsp;&#37329;&#23578;&#21830;&#22478; &#187; æ³¨å†Œ</td>
 <td align="right" width="10%">&nbsp;<a href="#bottom"><img src="images/arrow_dw.gif" align="absmiddle" border="0"></a></td>        
 </tr></tbody></table><br>
 <form method="post" name="register" action="UserModify.jsp" onSubmit="this.regsubmit.disabled=true;">
@@ -119,10 +120,10 @@ select			{ font: 11px Verdana,Tahoma; color: #000000; font-weight: normal; backg
 
 <table class="tableborder" align="center" cellpadding="4" cellspacing="1" width="97%">
 <tbody><tr>
-<td colspan="2" class="header">ÓÃ»§ĞŞ¸Ä - ±ØÌîÄÚÈİ</td>
+<td colspan="2" class="header">ç”¨æˆ·ä¿®æ”¹ - å¿…å¡«å†…å®¹</td>
 </tr>
 <tr>
-<td class="altbg1" width="21%">ÓÃ»§Ãû:</td>
+<td class="altbg1" width="21%">ç”¨æˆ·å:</td>
 <td class="altbg2"><input name="username" size="25" maxlength="25" type="text" readonly value="<%=u.getUsername()%>"> </td>
 </tr>
 
@@ -132,33 +133,33 @@ select			{ font: 11px Verdana,Tahoma; color: #000000; font-weight: normal; backg
 </tr>
 
 <tr>
-<td class="altbg1" valign="top">ËÍ»õµØÖ·:</td>
+<td class="altbg1" valign="top">é€è´§åœ°å€:</td>
 <td class="altbg2"><textarea name="addr" cols="60" rows="5" id="addr"><%=u.getAddr()%></textarea></td>
 </tr>
 </tbody></table>
 <br>
-<center><input name="regsubmit" value="Ìá &nbsp; ½»" type="submit"></center>
+<center><input name="regsubmit" value="æ &nbsp; äº¤" type="submit"></center>
 </form>
 
 <script language="JavaScript">
 document.register.username.focus();
 </script>
 
-<p align="center">¡¡</p>
+<p align="center">ã€€</p>
 <table class="smalltxt" cellpadding="4" cellspacing="0" width="100%">
-<tbody><tr class="altbg1"><td>ËùÓĞÊ±¼äÎª GMT+8, ÏÖÔÚÊ±¼äÊÇ 2007-4-20 11:17</td>
-<td align="right"><a href="http://bbs.allsmart.com/member.php?action=clearcookies" class="bold">Çå³ı Cookies</a></td>
+<tbody><tr class="altbg1"><td>æ‰€æœ‰æ—¶é—´ä¸º GMT+8, ç°åœ¨æ—¶é—´æ˜¯ 2007-4-20 11:17</td>
+<td align="right"><a href="http://bbs.allsmart.com/member.php?action=clearcookies" class="bold">æ¸…é™¤ Cookies</a></td>
 <td align="right" width="1">&nbsp;</td>
 </tr>
-<tr style="padding: 0px; font-size: 0px; line-height: 0px;" images="" green="" bg01.gif="" )=""><td colspan="3">¡¡</td></tr>
+<tr style="padding: 0px; font-size: 0px; line-height: 0px;" images="" green="" bg01.gif="" )=""><td colspan="3">ã€€</td></tr>
 </tbody></table>
 <p align="center">
 
 <br>
 <a name="bottom"></a>
 
-<a target="_blank" href="http://www.thinkpadclub.com.cn/"><u>½ğÉĞÉÌ³Ç</u></a><br>
-·şÎñÈÈÏß:010-58052712
+<a target="_blank" href="http://www.thinkpadclub.com.cn/"><u>é‡‘å°šå•†åŸ</u></a><br>
+æœåŠ¡çƒ­çº¿:010-58052712
 <!--<br><font color=#ebebeb>
 Powered by <a href="http://www.discuz.net" target="_blank"><font color=#ebebeb>Discuz!</font></a> 
 <a href="misc.php?action=viewlicense"><b style="color:#ebebeb">4.0.0RC4</b></a>&nbsp;
